@@ -1,15 +1,16 @@
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body {
+html, body {
     font-family: sans-serif;
     font-size: 16px;
     line-height: 1.5;
     color: black;
-    background-color: blanchedalmond;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
     height: 100%;
 }
 
@@ -19,18 +20,25 @@ h1 {
 
 .container {
     margin: 0 auto;
+    max-width: 1200px;
+    padding: 30px;
+}
+
+header {
+    color: white;
+    background-color: palevioletred;
+    height: 80px;
+    display: flex;
+    flex-basis: auto;
 }
 
 .header .container {
-    color: white;
-    background-color: palevioletred;
     display: flex;
-    height: 80px;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
     font-size: 45px;
     font-weight: bold;
+    width: 100%;
 }
 
 .navbar {
@@ -52,7 +60,6 @@ h1 {
     list-style-type: none;
     display: flex;
     gap: 20px;
-    
 }
 
 .navbar a:link{
@@ -70,7 +77,13 @@ h1 {
     background-color:deepskyblue;
     color: white;
     min-height: 250px;
+    height: 100%;
+}
 
+.main-body .content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .main-body h1 {
@@ -90,7 +103,29 @@ h1 {
     max-height: 400px;
 }
 
-footer .footer {
+.boxes .container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: space-evenly;
+}
+
+.box {
+    flex: 1;
+    color: white;
+    background: dimgray;
+    margin: 20px 10px;
+    padding: 15px 20px;
+    box-shadow: 0 3px 5px 0, 0.6;
+    border-radius: 10px;
+    height: 200px;
+}
+
+footer {
+    margin-top: auto;
+}
+
+footer .footer-info {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
